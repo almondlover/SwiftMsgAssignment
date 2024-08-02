@@ -1,4 +1,5 @@
 using Serilog;
+using SwiftMsgAssignment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSerilog();
+
+builder.Services.AddScoped<IMessageService, MessageService>();
 
 var app = builder.Build();
 

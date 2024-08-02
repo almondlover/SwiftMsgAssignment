@@ -14,10 +14,11 @@
         //application header
         public char IOID { get; set; }
         public int SWIFTMT { get; set; }
-        public string DestinationAddress { get; set; }
-        public char Priority { get; set; }
-        public char? DeliveryMontoring { get; set; }
-        public string? ObsolescencePeriod { get; set; }
+        public TimeOnly InputTime { get; set; }
+        public string MIR { get; set; }
+        public DateOnly OutputDate { get; set; }
+        public TimeOnly OutputTime { get; set; }
+        public char? Priority { get; set; }
     }
     public class MT799TextBlock
     { 
